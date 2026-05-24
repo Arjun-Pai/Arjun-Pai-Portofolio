@@ -16,11 +16,6 @@ import { MilestoneWheel } from "@/components/MilestoneWheel";
 import { AwardsMarquee } from "@/components/AwardsMarquee";
 import { SiteFooter } from "@/components/SiteFooter";
 import arjunHeadshot from "@/assets/arjun-headshot.png";
-import arjunLab from "@/assets/arjun-lab.png";
-import projectDrone from "@/assets/project-drone.png";
-import projectRobot from "@/assets/project-robot.png";
-import projectSeedcar from "@/assets/project-seedcar.png";
-import projectHand from "@/assets/project-hand.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
