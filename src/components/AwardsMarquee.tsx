@@ -1,8 +1,9 @@
-import { Trophy, Medal, Award, BadgeCheck, Star, ScrollText } from "lucide-react";
+import { Trophy, Medal, Award, BadgeCheck, Star, ScrollText, Users } from "lucide-react";
 
 const awards = [
   { icon: Trophy, name: "CircuitBreak 2025 Lead", year: "2025", desc: "Organized end-to-end student hackathon." },
   { icon: Medal, name: "Byte Battle Finalist", year: "2025", desc: "Top performer in competitive coding bracket." },
+  { icon: Users, name: "Interact Club", year: "2025", desc: "Active member driving service and leadership initiatives." },
   { icon: Award, name: "Taekwondo Black Belt", year: "2023", desc: "Years of disciplined training and testing." },
   { icon: BadgeCheck, name: "Python Certified", year: "2024", desc: "Structured certification in Python programming." },
   { icon: BadgeCheck, name: "HTML Certified", year: "2024", desc: "Web fundamentals certification." },

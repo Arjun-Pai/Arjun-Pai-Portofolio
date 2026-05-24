@@ -16,11 +16,6 @@ import { MilestoneWheel } from "@/components/MilestoneWheel";
 import { AwardsMarquee } from "@/components/AwardsMarquee";
 import { SiteFooter } from "@/components/SiteFooter";
 import arjunHeadshot from "@/assets/arjun-headshot.png";
-import arjunLab from "@/assets/arjun-lab.png";
-import projectDrone from "@/assets/project-drone.png";
-import projectRobot from "@/assets/project-robot.png";
-import projectSeedcar from "@/assets/project-seedcar.png";
-import projectHand from "@/assets/project-hand.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,12 +30,12 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { name: "Delivery Drone", desc: "Autonomous aerial delivery prototype.", tech: "Arduino · ESP32 · Python", img: projectDrone },
-  { name: "Delivery Robot", desc: "Ground-based last-mile delivery bot.", tech: "Raspberry Pi · Python · ROS", img: projectRobot },
-  { name: "Seed Car", desc: "Self-planting agricultural rover.", tech: "Arduino · C++ · Sensors", img: projectSeedcar },
+  { name: "Delivery Drone", desc: "Autonomous aerial delivery prototype.", tech: "Arduino · ESP32 · Python", img: null },
+  { name: "Delivery Robot", desc: "Ground-based last-mile delivery bot.", tech: "Raspberry Pi · Python · ROS", img: null },
+  { name: "Seed Car", desc: "Self-planting agricultural rover.", tech: "Arduino · C++ · Sensors", img: null },
   { name: "Mesh Comms", desc: "Robots talking without WiFi/Bluetooth.", tech: "ESP32 · LoRa · C", img: null },
   { name: "AI Vision System", desc: "Real-time object detection pipeline.", tech: "Python · OpenCV · TensorFlow", img: null },
-  { name: "AI Robotic Hand", desc: "Gesture-controlled prosthetic prototype.", tech: "Arduino · Python · Servos", img: projectHand },
+  { name: "AI Robotic Hand", desc: "Gesture-controlled prosthetic prototype.", tech: "Arduino · Python · Servos", img: null },
   { name: "Water Purifier Bottle", desc: "Portable UV+filtration system.", tech: "Hardware · Chemistry", img: null },
   { name: "School Hub", desc: "Unified learning + activity platform.", tech: "React · TypeScript · Node", img: null },
   { name: "Engineering Hub", desc: "Workspace for student engineers.", tech: "React · TSX · Firebase", img: null },
@@ -137,8 +132,19 @@ function Index() {
         <section id="about" className="relative px-6 py-32 md:px-12">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-cyan glow-cyan">
-                <img src={arjunLab} alt="Arjun working in his lab" width={1280} height={853} loading="lazy" className="h-full w-full object-cover" />
+              <div className="relative aspect-square overflow-hidden rounded-2xl border border-cyan glow-cyan">
+                <div className="grid-bg absolute inset-0 opacity-40" />
+                <div className="absolute -left-12 top-1/3 h-64 w-64 rounded-full bg-[#00F5FF]/25 blur-[80px]" />
+                <div className="absolute -right-12 bottom-1/4 h-64 w-64 rounded-full bg-[#FFB700]/20 blur-[80px]" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="font-display text-[10rem] font-extrabold leading-none text-cyan-glow opacity-30">A</div>
+                </div>
+                <div className="absolute bottom-6 left-6 font-display text-xs uppercase tracking-[0.3em] text-white/60">
+                  // operator: arjun.pai
+                </div>
+                <div className="absolute right-6 top-6 text-[10px] uppercase tracking-[0.3em] text-cyan-glow">
+                  ● online
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080A12] via-transparent to-transparent" />
               </div>
             </Reveal>
